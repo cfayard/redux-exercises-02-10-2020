@@ -21,7 +21,16 @@
 // Adding to the amount of coffee you drink.
 // Setting the kind of sandwich you want for lunch.
 
-this.state = {
+
+import {
+    createStore
+} from 'redux';
+
+const defaultState = {
     numberMoviesWatched: [420]
-}, 
+}
+
+const ADD_COUNTER = 'ADD_COUNTER'
+const INCREMENT = 'INCREMENT'
+
 
