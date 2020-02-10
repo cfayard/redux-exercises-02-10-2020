@@ -21,23 +21,7 @@
 // Adding to the amount of coffee you drink.
 // Setting the kind of sandwich you want for lunch.
 
+this.state = {
+    numberMoviesWatched: [420]
+}, 
 
-import React, { PureComponent } from 'react'
-
-class Index extends PureComponent {
-    constructor(props) {
-        super(props)
-
-        this.state = {
-            
-        }
-    }
-
-    render() {
-        return (
-            
-        )
-    }
-}
-
-export default Index
