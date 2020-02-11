@@ -51,14 +51,19 @@ const defaultLunchState = {
 }
 
 const UPDATE_LUNCH_ITEM = 'UPDATE_LUNCH_ITEM'
-
 // example action that modifies lunch item
-// {
-//     type: UPDATE_LUNCH_ITEM,
-//     payload: {
-//         itemName: "hot dog"
-//     }
-// }
+function actionUpdateLunch(item) {
+    return {
+        type: UPDATE_LUNCH_ITEM,
+        payload: {
+            itemName: item
+        }
+    }
+}
+
+
+
+
 
 // example action provided by redux
 // when it creates the store
@@ -88,3 +93,9 @@ const store = createStore(  lunch,
                             window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
                         );
 window.store = store;
+store.subscribe(() => {
+    // just for debugging
+    console.table(store.getState())
+})
+
+store.dispatch(actionUpdateLunch('steak'));
